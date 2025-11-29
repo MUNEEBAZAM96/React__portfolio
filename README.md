@@ -1,156 +1,137 @@
-# Personal Portfolio Website
+# Muneeb Ur Rehman - Portfolio Website
 
-A modern, responsive portfolio website built with React and Vite. Showcase your skills, projects, and experience with a beautiful, animated interface.
+A sleek, modern, and animated personal portfolio website built with Next.js, TypeScript, Tailwind CSS, Three.js, and Framer Motion.
 
-## Features
+## 🚀 Features
 
-- 🎨 Modern and beautiful UI design
-- 📱 Fully responsive (mobile, tablet, desktop)
-- ⚡ Fast and optimized with Vite
-- 🎭 Smooth animations and transitions
-- 🌈 Gradient color scheme
-- 📧 Contact form
-- 🎯 Smooth scrolling navigation
-- 💼 Project showcase section
-- 🛠️ Skills display with progress bars
+- **Modern Tech Stack**: Next.js 14 with TypeScript for type safety
+- **3D Animations**: Three.js integration with React Three Fiber for interactive 3D elements
+- **Smooth Animations**: Framer Motion for beautiful transitions and animations
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Dark Mode**: Professional dark theme (default) with toggle option
+- **SEO Optimized**: Meta tags and server-side rendering
+- **Performance**: Lazy loading and optimized images
+- **Accessibility**: ARIA labels and keyboard navigation
 
-## Getting Started
+## 📋 Sections
 
-### Prerequisites
+1. **Hero/Home**: Full-screen hero with 3D animated elements
+2. **About**: Personal bio with education and interests
+3. **Skills**: Animated skill cards with icons
+4. **Experience**: Timeline layout for work experience
+5. **Projects**: Interactive project cards with modals
+6. **Certificates**: Certificate showcase with flip animations
+7. **Contact**: Contact form with EmailJS integration
 
-- Node.js (v16 or higher)
-- npm or yarn
+## 🛠️ Installation
 
-### Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/MUNEEBAZAM96/React__portfolio.git
+   cd portfolio_site
+   ```
 
-1. Install dependencies:
-```bash
-npm install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-2. Start the development server:
-```bash
-npm run dev
-```
+3. **Set up EmailJS (Optional)**
+   - Create an account at [EmailJS](https://www.emailjs.com/)
+   - Get your Service ID, Template ID, and Public Key
+   - Update the values in `components/Contact.tsx`
 
-3. Open your browser and navigate to `http://localhost:5173`
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🚢 Deployment
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Import your repository on [Vercel](https://vercel.com)
+3. Vercel will automatically detect Next.js and deploy
 
 ### Build for Production
 
 ```bash
 npm run build
+npm start
 ```
 
-The built files will be in the `dist` directory.
+## 📦 Dependencies
 
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
-## Customization
-
-### Update Personal Information
-
-1. **Hero Section** (`src/components/Hero.jsx`):
-   - Change "Your Name" to your actual name
-   - Update the subtitle and description
-   - Update social media links
-
-2. **About Section** (`src/components/About.jsx`):
-   - Modify the description text
-   - Update statistics (projects, experience, clients)
-
-3. **Skills Section** (`src/components/Skills.jsx`):
-   - Add/remove skills
-   - Update skill levels (percentage)
-   - Add new skill categories if needed
-
-4. **Projects Section** (`src/components/Projects.jsx`):
-   - Replace placeholder projects with your actual projects
-   - Update project images, descriptions, and links
-   - Modify technologies used
-
-5. **Contact Section** (`src/components/Contact.jsx`):
-   - Update email, phone, and location
-   - Connect the form to a backend service (e.g., Formspree, EmailJS)
-
-6. **Footer** (`src/components/Footer.jsx`):
-   - Update social media links
-   - Change copyright text
+### Core
+- `next` - React framework
+- `react` & `react-dom` - UI library
+- `typescript` - Type safety
 
 ### Styling
+- `tailwindcss` - Utility-first CSS framework
+- `autoprefixer` & `postcss` - CSS processing
 
-- Main color scheme is defined in `src/index.css` under `:root` variables
-- Each component has its own CSS file for component-specific styles
-- Modify colors, fonts, and spacing as needed
+### Animations & 3D
+- `framer-motion` - Animation library
+- `three` - 3D graphics library
+- `@react-three/fiber` - React renderer for Three.js
+- `@react-three/drei` - Useful helpers for React Three Fiber
+
+### Forms & Utilities
+- `@emailjs/browser` - Email service integration
+- `react-scroll` - Smooth scrolling
+- `react-icons` - Icon library
+
+## 🎨 Customization
 
 ### Colors
-
-The default color scheme uses:
-- Primary: Indigo (`#6366f1`)
-- Secondary: Purple (`#8b5cf6`)
-- Accent: Pink (`#ec4899`)
-
-You can change these in `src/index.css`:
-
-```css
-:root {
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --accent-color: #ec4899;
-  /* ... */
+Edit `tailwind.config.ts` to change the color scheme:
+```typescript
+colors: {
+  navy: '#0A192F',
+  teal: '#64FFDA',
+  // ... more colors
 }
 ```
 
-## Project Structure
+### Content
+Update personal information in:
+- `components/Hero.tsx` - Hero section content
+- `components/About.tsx` - About section
+- `components/Experience.tsx` - Work experience
+- `components/Projects.tsx` - Project showcase
+- `components/Certificates.tsx` - Certificates
+- `components/Contact.tsx` - Contact information
 
-```
-portfolio_site/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── About.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Projects.jsx
-│   │   └── Skills.jsx
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
+### 3D Elements
+Modify Three.js components:
+- `components/FloatingCode.tsx` - Hero 3D animation
+- `components/ThreeJSBackground.tsx` - Background particles
 
-## Technologies Used
+## 📝 Notes
 
-- **React** - UI library
-- **Vite** - Build tool and dev server
-- **React Icons** - Icon library
-- **CSS3** - Styling with modern features
+- Replace placeholder images with actual project screenshots
+- Update resume PDF link in Hero section
+- Configure EmailJS for contact form functionality
+- Add your actual social media links
+- Update Google Maps integration in Contact section
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## License
+## 📄 License
 
 This project is open source and available under the MIT License.
 
-## Contributing
+## 👤 Author
 
-Feel free to fork this project and customize it for your own portfolio!
+**Muneeb Ur Rehman**
+- Email: muneebazam96@gmail.com
+- Location: Islamabad, Pakistan
+- LinkedIn: [Your LinkedIn](https://linkedin.com)
+- GitHub: [@MUNEEBAZAM96](https://github.com/MUNEEBAZAM96)
 
 ---
 
-Made with ❤️ using React and Vite
-
+Made with ❤️ using Next.js, TypeScript, and Three.js
